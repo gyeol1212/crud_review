@@ -1,0 +1,15 @@
+<h1>가계부입니다</h1>
+<p>돈을 아껴 봅시다</p>
+
+<a href="home/expense">얼마 썼니</a>
+
+<p>지금까지 쓴 돈..</p><br>
+<% @posts.each do |x| %>
+돈 쓴 날 : <%= x.date%> <br>
+뭐 땜 에 : <%= x.title%> <br>
+얼 마 나 : <%= x.content%> <br>
+<a href="home/edit/<%=x.id%>">수정하기</a> <br>
+<a href="home/destroy/<%=x.id%>">삭제하기</a>
+<br>
+-------------------------<br>
+<%end%>
